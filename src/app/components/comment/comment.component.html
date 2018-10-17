@@ -1,0 +1,20 @@
+<div *ngIf="item">
+  <div [innerHTML]="item.text"></div>
+  <div>
+    <span>
+      <ion-icon name="person"></ion-icon>
+      {{ item.by }}
+    </span>
+    <span>
+      <ion-icon name="time"></ion-icon>
+      {{ item.time | timeAgo }}
+    </span>
+    <ion-button *ngIf="item.kids" [fill]="'clear'" [routerLink]="['/comments', item.id]">
+      <ion-icon slot="icon-only" name="chatboxes"></ion-icon>
+      {{ item.kids.length }}
+    </ion-button>
+  </div>
+</div>
+<div *ngIf="!item">
+  Loading...
+</div>

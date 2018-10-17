@@ -1,0 +1,6 @@
+<app-favorite-toggle *ngIf="isLoggedIn$ | async"
+                     [itemId]="itemId"
+                     [inFavorite]="inFavorite$ | async"
+                     [loading]="loading$ | async"
+                     (toAdd)="add()"
+                     (toRemove)="remove()"></app-favorite-toggle>

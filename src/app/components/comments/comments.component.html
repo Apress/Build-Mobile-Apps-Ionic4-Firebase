@@ -1,0 +1,11 @@
+<ion-list *ngIf="items && items.length > 0">
+  <ion-item lines="full" *ngFor="let item of items">
+    <app-comment [item]="item"></app-comment>
+  </ion-item>
+</ion-list>
+<p *ngIf="items && items.length === 0">
+  No items.
+</p>
+<p *ngIf="!items">
+  Loading...
+</p>

@@ -1,0 +1,9 @@
+{
+  "name": "hacker-news-app-v4",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "hooks": {},
+  "pro_id": "792d5544"
+}

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "235153545323",
+    "firebase_url": "https://hacker-news-client-v4.firebaseio.com",
+    "project_id": "hacker-news-client-v4",
+    "storage_bucket": "hacker-news-client-v4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:235153545323:android:24fac564231cf9dd",
+        "android_client_info": {
+          "package_name": "io.vividcode.ionic4.hnc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "235153545323-kdg08l1og95h6df5pgmupt73i8chr8u2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAF5cItFGr1kPvHsi3ZHN0Ye0C4feTci4o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

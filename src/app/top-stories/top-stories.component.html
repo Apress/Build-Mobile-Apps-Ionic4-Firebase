@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Top Stories</ion-title>
+    <ion-buttons slot="secondary">
+      <ion-button id="btnShowLogin" routerLink="/login" *ngIf="!(loggedIn$ | async)">Log In</ion-button>
+      <ion-button id="btnShowFavorites" routerLink="/favorites" *ngIf="loggedIn$ | async">Favorites</ion-button>
+      <ion-button id="btnLogout" (click)="logout()" *ngIf="loggedIn$ | async">
+        <ion-avatar>
+          <img slot="icon-only" [src]="getPhotoURL(user$ | async)">
+        </ion-avatar>
+        Log out
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-refresher slot="fixed" [disabled]="false" (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <app-items [items]="items$ | async" (toOpen)="openUrl($event)" (toShare)="share($event)"></app-items>
+  <ion-infinite-scroll (ionInfinite)="load($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

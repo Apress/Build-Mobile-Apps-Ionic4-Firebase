@@ -1,0 +1,42 @@
+<ion-card *ngIf="item">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h2 class="title" (click)="openPage(item.url)">{{ item.title }}</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+         <ion-icon name="bulb"></ion-icon>
+          {{ item.score }}
+      </ion-col>
+      <ion-col>
+        <ion-icon name="person"></ion-icon>
+        {{ item.by }}
+      </ion-col>
+      <ion-col>
+        <ion-icon name="time"></ion-icon>
+        {{ item.time | timeAgo }} ago
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <app-favorite-toggle-container [itemId]="item.id"></app-favorite-toggle-container>
+      </ion-col>
+      <ion-col>
+        <ion-button [fill]="'clear'" (click)="share()">
+          <ion-icon slot="icon-only" name="share"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button *ngIf="item.kids" [fill]="'clear'" [routerLink]="['/comments', item.id]">
+          <ion-icon slot="icon-only" name="chatboxes"></ion-icon>
+          {{ item.kids.length }}
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
+<ion-card *ngIf="!item">
+  <ion-card-header>Loading...</ion-card-header>
+</ion-card>

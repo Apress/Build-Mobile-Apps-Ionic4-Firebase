@@ -1,0 +1,7 @@
+:host {
+  margin-top: 5px;
+}
+
+div > span:not(:last-child) {
+  padding-right: 10px;
+}

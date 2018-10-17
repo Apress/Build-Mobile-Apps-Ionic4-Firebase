@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/top-stories">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Log In</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form #loginForm="ngForm">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input name="email" type="email" [(ngModel)]="email" required="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input name="password" type="password" [(ngModel)]="password" required="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-button id="btnLogin" shape="round" size="default" [disabled]="loginForm.invalid || (loading$ | async)" (click)="login(loginForm.value)">Log In</ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-buttons>
+          <ion-button (click)="loginWithProvider('google')"><ion-icon slot="icon-only" name="logo-googleplus"></ion-icon></ion-button>
+          <ion-button (click)="loginWithProvider('facebook')"><ion-icon slot="icon-only" name="logo-facebook"></ion-icon></ion-button>
+          <ion-button (click)="loginWithProvider('twitter')"><ion-icon slot="icon-only" name="logo-twitter"></ion-icon></ion-button>
+          <ion-button (click)="loginWithProvider('github')"><ion-icon slot="icon-only" name="logo-github"></ion-icon></ion-button>
+        </ion-buttons>
+      </ion-item>
+      <ion-item color="danger" *ngIf="error$ | async">
+        <p>{{ error$ | async }}</p>
+      </ion-item>
+      <ion-item routerLink="/signup">
+          <ion-icon name="person-add" slot="start"></ion-icon>
+          Sign Up
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>

@@ -1,0 +1,27 @@
+:host {
+  width: 100%;
+}
+
+.title {
+  color: #488aff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.link {
+  font-size: 14px;
+}
+
+div {
+  margin: 1px;
+}
+
+ion-icon {
+  margin-right: 2px;
+}
+
+div > span:not(:last-child) {
+  padding-right: 10px;
+}
+

@@ -1,0 +1,9 @@
+<span>
+  <ion-spinner *ngIf="loading"></ion-spinner>
+  <ion-button fill="clear" *ngIf="!loading && inFavorite" (click)="remove()">
+    <ion-icon slot="icon-only" name="heart" color="danger"></ion-icon>
+  </ion-button>
+  <ion-button fill="clear" class="btnLike" *ngIf="!loading && !inFavorite" (click)="add()">
+    <ion-icon slot="icon-only" name="heart-empty" color="danger"></ion-icon>
+  </ion-button>
+</span>

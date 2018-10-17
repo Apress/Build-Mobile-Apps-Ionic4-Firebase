@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/top-stories">
+        <ion-icon slot="icon-only" name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Create New Account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form #signupForm="ngForm">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input name="name" type="text" [(ngModel)]="name" required="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input name="email" type="email" [(ngModel)]="email" required="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input name="password" type="password" [(ngModel)]="password" required="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-button size="default" shape="round" [disabled]="signupForm.invalid || (loading$ | async)" (click)="signUp(signupForm.value)">Create</ion-button>
+      </ion-item>
+      <ion-item color="danger" *ngIf="error$ | async">
+        <p>{{ error$ | async }}</p>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>
