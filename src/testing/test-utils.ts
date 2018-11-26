@@ -2,6 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { RouterTestingModule } from '@angular/router/testing';
 
 export class TestUtils {
   static beforeEachCompiler(components: Array<any>, providers: Array<any> = []): Promise<{fixture: any, instance: any}> {
@@ -26,7 +27,8 @@ export class TestUtils {
       ],
       imports: [
         FormsModule,
-        IonicModule,
+        IonicModule.forRoot(),
+        RouterTestingModule.withRoutes([]),
       ],
     });
   }
