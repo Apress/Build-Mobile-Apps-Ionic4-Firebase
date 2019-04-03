@@ -17,6 +17,10 @@ See the file Contributing.md for more information on how you can contribute to t
 
 ## Change log
 
+### **2019-01-30**
+
+* Update to Ionic `4.0.0` and Angular `7.2.2`.
+
 ### **2018-11-27**
  
 * Update to Ionic `4.0.0-beta.16` and Angular `7.1.0`.
@@ -26,28 +30,28 @@ See the file Contributing.md for more information on how you can contribute to t
 Output of `ng version`:
 
 ```
-Angular CLI: 7.0.6
+Angular CLI: 7.2.3
 Node: 8.12.0
 OS: darwin x64
-Angular: 7.1.0
+Angular: 7.2.2
 ... animations, common, compiler, compiler-cli, core, forms
 ... http, language-service, platform-browser
 ... platform-browser-dynamic, router
 
 Package                           Version
 -----------------------------------------------------------
-@angular-devkit/architect         0.10.5
-@angular-devkit/build-angular     0.10.5
-@angular-devkit/build-optimizer   0.10.5
-@angular-devkit/build-webpack     0.10.5
-@angular-devkit/core              0.7.5
-@angular-devkit/schematics        0.7.5
-@angular/cli                      7.0.6
-@angular/fire                     5.1.0
-@ngtools/webpack                  7.0.5
-@schematics/angular               7.0.6
-@schematics/update                0.10.6
+@angular-devkit/architect         0.12.3
+@angular-devkit/build-angular     0.12.3
+@angular-devkit/build-optimizer   0.12.3
+@angular-devkit/build-webpack     0.12.3
+@angular-devkit/core              7.2.3
+@angular-devkit/schematics        7.2.3
+@angular/cli                      7.2.3
+@angular/fire                     5.1.1
+@ngtools/webpack                  7.2.3
+@schematics/angular               7.2.3
+@schematics/update                0.12.3
 rxjs                              6.3.3
-typescript                        3.1.6
-webpack                           4.19.1
+typescript                        3.2.4
+webpack                           4.28.4
 ```
